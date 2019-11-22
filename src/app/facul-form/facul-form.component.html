@@ -1,0 +1,23 @@
+
+<h1>Agregar </h1>
+<form [formGroup]="faculForm" (ngSubmit)="save()">
+    
+    <label>
+        Nombre:
+        <input type="text" formControlName="facultad_nombre" name="facultad_nombre" id="facultad_nombre" required>
+        <div [hidden]="faculForm.get('facultad_nombre').valid || 
+        faculForm.get('facultad_nombre').pristine" class="alert alert-danger">
+            Titulo is required
+        </div>
+    </label>
+    <br>
+    <label>
+        facultad_sede:
+        <input type="text" formControlName="facultad_sede" name="facultad_sede" id="facultad_sede" required>
+    </label>
+    <br>
+    <button type="submit" [disabled]="!faculForm.valid" class="btn btn-primary">Save</button> 
+</form>
+
+
+<p>{{ faculForm.value | json }}</p>

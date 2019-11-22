@@ -1,0 +1,45 @@
+ <P>BUSCADOR</P>
+                
+<form [formGroup]="escuelaForm" (ngSubmit)="save()">
+    <label>
+          <p> Nombre:</p>
+        <input type="text " formControlName="escuela_prof_acreditada" name="escuela_prof_acreditada" id="escuela_prof_acreditada" placeholder="roberto">
+    </label>
+        
+    <label>
+         <p>Primer apellido:</p> 
+        <input type="text " formControlName="escuela_prof_acreditada" name="escuela_prof_acreditada" id="escuela_prof_acreditada" placeholder="perez" >
+    </label>
+        
+    <label>
+         <p>Codigo:</p> 
+        <input type="number " formControlName="facultad_id" name="facultad_id" id="facultad_id" placeholder="201811165   " >
+    </label>
+    <label>
+            <p>Facultad:</p> 
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <option selected>Choose...</option>
+          <option value="1">FIA</option>
+          <option value="2">FCE</option>
+          <option value="3">FCS</option>
+            </select>
+        </label>
+    <label>
+        <p>Escuela pprofesional:</p>
+        
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+      <option selected>Choose...</option>
+      <option value="1">FIA</option>
+      <option value="2">FCE</option>
+      <option value="3">FCS</option>
+        </select>
+    </label>
+
+    <label>
+         <p>Fecha de egreso:</p> 
+        <input type="date" formControlName="facultad_id" name="facultad_id" id="facultad_id" >
+    </label>
+        <br>
+    <button type="submit" [disabled]="!escuelaForm.valid" class="btn btn-primary">buscar</button> 
+</form>
+  

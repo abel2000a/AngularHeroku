@@ -1,0 +1,47 @@
+<H2><p>ESCUELA</p></H2>
+<!--
+<nav>
+  <a routerLink="/escuelaform" routerLinkActive="active">New school</a> <br>
+
+</nav>
+
+  <div *ngFor="let e of list">
+
+    <span> {{ e.id }} </span> 
+    <span> {{ e.nombre }} </span>
+    <span> {{ e.esta_acre }} </span>
+    
+    <span><button routerLink="/escuelaform/{{ e.id }}" routerLinkActive="active" >Edit</button></span>
+    <span><button (click)="delete(e.id)">Delete</button></span>
+
+  </div>
+-->
+
+<nav>
+    <button class="btn btn-sm btn-outline-secondary" type="button" routerLink="/escuelaform">Nueva Escuela</button>
+  <br>
+</nav>
+  <table class="table" >
+      <thead class="thead-dark">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Esta acrditada (S/N)</th>          
+          </tr>
+        </thead>
+    <tbody class="thead-dark" *ngFor="let e of list; index as i">
+      
+      <tr>
+        <th scope="col">{{ i+1}}</th>
+        <th scope="col">{{ e.id }}</th>
+        <th scope="col">{{ e.escuela_prof_nombre }}</th>
+        <th scope="col">{{ e.escuela_prof_acreditada }}</th>
+
+        <th scope="col"><button routerLink="/escuelaform/{{ e.id }}" routerLinkActive="active">Edit</button></th>
+        <th><button (click)="delete(e.id)">Delete</button></th>
+      </tr>
+      
+    </tbody>
+  </table>
+  

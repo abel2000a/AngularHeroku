@@ -1,0 +1,30 @@
+<table class="table" >
+    <thead class="thead-primary">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">ID</th>
+          <th scope="col">codigo</th> 
+          <th scope="col">nombre</th> 
+          <th scope="col">apellido</th>
+          <th scope="col">facultad_nombre</th>
+          <th scope="col">facultad_sede</th>         
+        </tr>
+      </thead>
+  <tbody class="thead-primary" *ngFor="let n of list; index as i">
+    
+    <tr>
+      <th scope="col">{{ i+1}}</th>
+      <th scope="col">{{ n.id }}</th>
+      <th scope="col">{{ n.egresado_codigo }}</th>
+      <th scope="col">{{ n.persona_nombre }}</th>
+      <th scope="col">{{ n.persona_apellido_pat }}</th>
+      <th scope="col">{{ n.facultad_nombre }}</th>
+      <th scope="col">{{ n.facultad_sede }}</th>
+
+      <th scope="col"><button routerLink="/faculform/{{n.id}}" routerLinkActive="active">Edit</button></th>
+      
+      <th><button (click)="delete(n.id)">Delete</button></th>
+    </tr>
+    
+  </tbody>
+</table>
