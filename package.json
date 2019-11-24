@@ -8,11 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build"
+    "postinstall": "ng build --output-path dist"
   },
   "engines": {
-    "node": "10.15.3",
-    "npm": "6.4.1"
+    "node": "12.x"
   },
   "private": true,
   "dependencies": {
