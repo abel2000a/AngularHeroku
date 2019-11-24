@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EscuelaService {
 
-  endPoint = 'http://localhost:8000/api/escuela';
+  endPoint = 'https://laravelherokulp2.herokuapp.com/api/escuela';
 
   constructor(private http: HttpClient) {
   }
