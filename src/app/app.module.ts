@@ -27,6 +27,7 @@ import { FaculFormComponent } from './facul-form/facul-form.component';
 import { BuscadorIndexComponent } from './buscador-index/buscador-index.component';
 
 import { IndiceIndexComponent } from './indice-index/indice-index.component';
+import { DatosIndexComponent } from './datos-index/datos-index.component';
 
 
 
@@ -55,6 +56,10 @@ const appRoutes: Routes = [
 
   { path: 'indice',  component: IndiceIndexComponent },
   
+  { path: 'datospersonales',  component: DatosIndexComponent },
+
+
+  
 
   
   { path: '**', component: PageNotFoundComponent },
@@ -79,6 +84,7 @@ const appRoutes: Routes = [
     FaculFormComponent,
     BuscadorIndexComponent,
     IndiceIndexComponent,
+    DatosIndexComponent,
 
   ],
   imports: [
