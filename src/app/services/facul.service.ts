@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class FaculService {
 
-  endPoint = 'http://localhost:8000/api/facultad';
+  endPoint = 'https://laravelherokulp2.herokuapp.com/api/facultad';
 
   constructor(private http: HttpClient) {
   }
